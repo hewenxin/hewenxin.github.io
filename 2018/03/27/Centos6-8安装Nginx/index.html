@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Centos6.8安装Nginx | 前端攻城狮</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="安装Nginx需要完成以下依赖的安装1.gcc 安装： yum install gcc-c++ 2.PCRE pcre-devel 安装： yum install -y pcre pcre-devel 3.zlib 安装:  yum install -y zlib zlib-devel 4.OpenSSL 安装: yum install -y openssl openssl-devel 安装Ngi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Centos6.8安装Nginx">
+<meta property="og:url" content="http://www.hewenxin.cn/2018/03/27/Centos6-8安装Nginx/index.html">
+<meta property="og:site_name" content="前端攻城狮">
+<meta property="og:description" content="安装Nginx需要完成以下依赖的安装1.gcc 安装： yum install gcc-c++ 2.PCRE pcre-devel 安装： yum install -y pcre pcre-devel 3.zlib 安装:  yum install -y zlib zlib-devel 4.OpenSSL 安装: yum install -y openssl openssl-devel 安装Ngi">
+<meta property="og:updated_time" content="2018-03-27T13:13:01.137Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Centos6.8安装Nginx">
+<meta name="twitter:description" content="安装Nginx需要完成以下依赖的安装1.gcc 安装： yum install gcc-c++ 2.PCRE pcre-devel 安装： yum install -y pcre pcre-devel 3.zlib 安装:  yum install -y zlib zlib-devel 4.OpenSSL 安装: yum install -y openssl openssl-devel 安装Ngi">
+  
+    <link rel="alternate" href="/atom.xml" title="前端攻城狮" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">前端攻城狮</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.hewenxin.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Centos6-8安装Nginx" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/27/Centos6-8安装Nginx/" class="article-date">
+  <time datetime="2018-03-27T13:08:55.000Z" itemprop="datePublished">2018-03-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Centos6.8安装Nginx
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装Nginx需要完成以下依赖的安装"><a href="#安装Nginx需要完成以下依赖的安装" class="headerlink" title="安装Nginx需要完成以下依赖的安装"></a>安装Nginx需要完成以下依赖的安装</h3><p>1.gcc 安装：</p>
+<pre><code>yum install gcc-c++
+</code></pre><p>2.PCRE pcre-devel 安装：</p>
+<pre><code>yum install -y pcre pcre-devel
+</code></pre><p>3.zlib 安装: </p>
+<pre><code>yum install -y zlib zlib-devel
+</code></pre><p>4.OpenSSL 安装:</p>
+<pre><code>yum install -y openssl openssl-devel
+</code></pre><h3 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h3><p>1.下载Nginx</p>
+<pre><code>wget -c https://nginx.org/download/nginx-1.10.1.tar.gz
+</code></pre><p>2.解压：</p>
+<pre><code>tar -zxvf nginx-1.10.1.tar.gz
+</code></pre><p>3.配置：</p>
+<p>cd nginx-1.10.1 进入nginx解压目录</p>
+<pre><code>./configure
+</code></pre><p>4.编译安装:</p>
+<pre><code>make
+make install
+</code></pre><p>5.查找安装路径：</p>
+<pre><code>whereis nginx
+</code></pre><h3 id="启动、停止Nginx"><a href="#启动、停止Nginx" class="headerlink" title="启动、停止Nginx:"></a>启动、停止Nginx:</h3><p>1.查找nginx安装路径：</p>
+<pre><code>whereis nginx
+</code></pre><p>2.进入nginx安装路径：</p>
+<pre><code>cd /usr/local/nginx/sbin
+</code></pre><p>3.启动：</p>
+<pre><code>1.  ./nginx
+2.  /usr/local/nginx/sbin/nginx
+      -c /usr/local/nginx/conf/nginx.conf
+两种方式都可以
+</code></pre><p>4.停止：</p>
+<p>从容停止：<code>kill -QUIT 19795</code>（注意：19795是Nginx的进程号）</p>
+<p>快速停止：<code>kill -TERM 46968</code>（注意：46968是Nginx的进程号）</p>
+<p><code>kill -INT 46975</code>（注意：46975是Nginx的进程号）</p>
+<p>强制停止：<code>pkill -9 nginx</code></p>
+<p><code>./nginx -s stop</code>:此方式相当于先查出nginx进程id再使用kill命令强制杀掉进程。</p>
+<p><code>./nginx -s quit</code>:此方式停止步骤是待nginx进程处理任务完毕进行停止。 </p>
+<p>先停止再启动：</p>
+<pre><code>./nginx -s quit; ./nginx
+</code></pre><p>5.重启：</p>
+<h3 id="验证nginx的配置文件是否正确："><a href="#验证nginx的配置文件是否正确：" class="headerlink" title="验证nginx的配置文件是否正确："></a>验证nginx的配置文件是否正确：</h3><p>1.<code>cd /usr/local/nginx/sbin</code> 进入nginx的安装目录，接着执行 <code>./nginx -t</code></p>
+<p>如果正确，会有如下的信息：</p>
+<pre><code>[root@localhost sbin]# ./nginx -t
+
+nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok
+nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
+</code></pre><p>2.<code>/usr/local/nginx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf</code></p>
+<p>如果正确会有如下信息：</p>
+<pre><code>[root@localhost sbin]# /usr/local/nginx/sbin/nginx 
+
+-t -c /usr/local/nginx/conf/nginx.conf
+
+nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok
+
+nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
+</code></pre><h3 id="如果配置文件正确，则可以重启："><a href="#如果配置文件正确，则可以重启：" class="headerlink" title="如果配置文件正确，则可以重启："></a>如果配置文件正确，则可以重启：</h3><ol>
+<li><code>./nginx -s reload</code> （需提前进入nginx可执行文件目录：<code>cd /usr/local/nginx/sbin</code>）</li>
+</ol>
+<ol start="2">
+<li><code>kill -HUP 46991</code>（46991是nginx的进程号）</li>
+</ol>
+<ol start="6">
+<li>重新加载配置文件：</li>
+</ol>
+<p>当 nginx的配置文件 nginx.conf 修改后，要想让配置生效需要重启 nginx，使用-s reload不用先停止 nginx再启动 nginx 即可将配置信息在 nginx 中生效</p>
+<p>例如： </p>
+<pre><code>./nginx -s reload
+</code></pre><p>设置Nginx开机自启动：</p>
+<p>即在rc.local增加启动代码就可以了</p>
+<p>查看nginx进程：</p>
+<pre><code>1.ps -ef |grep nginx
+
+2.ps aux|grep nginx
+</code></pre><p>两种方式都可以</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hewenxin.cn/2018/03/27/Centos6-8安装Nginx/" data-id="cjf9q47b40000aor23e3vbjbk" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/26/centos6-8安装mysql5-6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">centos6.8安装mysql5.6</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/27/Centos6-8安装Nginx/">Centos6.8安装Nginx</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/26/centos6-8安装mysql5-6/">centos6.8安装mysql5.6</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/25/centos6-8配置Java-Web环境/">centos6.8配置Java Web环境</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+    	<a href="http://www.miitbeian.gov.cn">粤ICP备17069425号-1</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
